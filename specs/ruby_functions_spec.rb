@@ -32,7 +32,7 @@ class FunctionsTest < MiniTest::Test
     assert_equal( 5, divide_result )
   end
 
-=begin
+
   def test_length_of_string()
     test_string = "A string of length 21"
     length_of_string = length_of_string( test_string )
@@ -66,6 +66,7 @@ class FunctionsTest < MiniTest::Test
     assert_equal( "September", result )
   end
 
+
   def test_number_to_short_month_name__month_1()
     first_month_string = number_to_short_month_name( 1 )
     assert_equal( "Jan", first_month_string )
@@ -81,23 +82,28 @@ class FunctionsTest < MiniTest::Test
     assert_equal( "Oct", tenth_month_string )
   end
 
+
   #Further
 
   #Given the length of a side of a cube calculate the volume
   def test_volume_of_cube()
-    #add test code here
+    result = volume_of_cube(10)
+    assert_equal(1000, result)
   end
+
 
   #Given the radius of a sphere calculate the volume
   def test_volume_of_sphere()
-    #add test code here
+    result = volume_of_sphere(10)
+    assert_equal(4188, result)
   end
+
 
   #Given a value in farenheit, convert this into celsius.
   def test_fahrenheit_to_celsius()
-    #add test code here
+    result = fahrenheit_to_celsius(50)
+    assert_equal(10, result)
   end
 
-=end
 
 end
